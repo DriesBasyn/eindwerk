@@ -1,0 +1,156 @@
+@mixin center($horizontal: true,$vertical:true,$mirror:false){
+  @if($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @else if($horizontal and $mirror){
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+  }
+  @else if($vertical and $mirror){
+    top: 50%;
+    right: 0;
+    transform:  translate(0,-50%);
+  }
+  @else if($horizontal){
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+  @else if($vertical){
+    top: 50%;
+    transform: translate(0,-50%);
+  }
+
+}
+@mixin corner($left:true,$top:true){
+  @if($left and $top){
+    left: 0;
+    top: 0;
+  }
+  @else if($left){
+    bottom: 0;
+    left: 0;
+  }
+  @else if($top){
+    right: 0;
+    top: 0;
+  }
+  @else{
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.parent{
+
+  position: relative;
+}
+.child{
+  position: absolute;
+  //center
+  &.center{
+    @include center;
+  }
+  //top center
+  &.t-horizontal{
+    @include center(true, false);
+  }
+  //left center
+  &.l-vertical{
+    @include center(false,true);
+  }
+  //bottom center
+  &.b-horizontal{
+    @include center(true,false,true);
+  }
+  //right center
+  &.r-vertical{
+    @include center(false,true,true)
+  }
+  //top left
+  &.corner{
+    @include corner;
+  }
+  //bottom left
+  &.bl-corner{
+    @include corner(true,false);
+  }
+  //top right
+  &.tr-corner{
+    @include corner(false,true);
+  }
+  //bottom right
+  &.br-corner{
+    @include corner(false,false);
+  }
+}
+//dropdown layout
+.costume_dropdown{
+  border-bottom: 1px solid black ;
+  background-color: white;
+  color: black;
+}
+.costume_dropdown:focus{
+  outline: none;
+  color:cornflowerblue;
+}
+//dropdown layout
+.costume_dropdown1{
+  border: 1px solid black ;
+  background-color: white;
+  color: black;
+}
+//costume button 1
+.costume_button1{
+  background-color: #f68236;
+  color: white;
+  border: none;
+}
+.costume_button1:hover{
+  color:black;
+}
+//costume checkbox
+//login
+.login{
+  height: 100vh;
+}
+
+
+
+//pagnation opmaak
+.page-item .page-link{
+  border: 1px solid white;
+  background-color: #514d4d;
+  color: white;
+//pagnation active element
+ &.active {
+   color: black;
+   background-color: white;
+ }
+//pagnation element hover
+
+  &:hover{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+  }
+}
+//form-check-input
+.form-check-input{
+  background-color: white;
+  border: 1px solid black;
+}
+.img1{
+  z-index: 20;
+
+}
+.img2{
+  z-index: 40;
+}
+.img3{
+  z-index: 60;
+}
+
+

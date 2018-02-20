@@ -1,0 +1,64 @@
+/*tags*/
+body{
+  font-family: 'Lato', sans-serif;
+}
+a{
+  color: black;
+}
+p{
+  font-family: 'Georgia';
+  margin: 0;
+}
+h6{
+  font-weight: bold;
+  text-transform: capitalize;
+}
+a > span{
+  color: orange;
+}
+/*end-tags*/
+/*id's*/
+
+
+/*classes*/
+.details_box{
+  height: 550px;
+}
+.add{
+  background-color: #f68236;
+  color: white;
+}
+.big_box{
+  height: 600px;
+}
+.small_box {
+  height: 300px;
+}
+.top_box{
+  height: 530px;
+}
+.carousel_header,.carousel_body{
+  display: none;
+}
+/*login pagina box shadow*/
+.login>div{
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+}
+/*hovers*/
+
+/*end-hovers*/
+/*media queries*/
+@media screen and (min-width: 576px){
+  header{
+    margin-top: 50px;
+  }
+  footer{
+    margin-bottom:50px;
+  }
+}
+@media screen and(min-width:991px ){
+  .carousel_header,.carousel_body{
+    display: block;
+  }
+}
+/*end-media queries*/
