@@ -37,13 +37,27 @@ a > span{
 .top_box{
   height: 530px;
 }
+//hidden on small screen
 .carousel_header,.carousel_body{
   display: none;
+}
+.shoppine-bag{
+  display:none
+}
+.underline{
+  text-decoration: underline;
+}
+.bold{
+  font-weight: bold;
+}
+.orange{
+  color: #f68236;
 }
 /*login pagina box shadow*/
 .login>div{
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
 }
+
 /*hovers*/
 
 /*end-hovers*/
@@ -60,5 +74,9 @@ a > span{
   .carousel_header,.carousel_body{
     display: block;
   }
+  .shoppine-bag{
+    display:inline-table;
+  }
+
 }
 /*end-media queries*/

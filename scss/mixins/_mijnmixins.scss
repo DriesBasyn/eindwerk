@@ -86,15 +86,20 @@
     @include corner(false,false);
   }
 }
+
 //dropdown layout
 .costume_dropdown{
-  border-bottom: 1px solid black ;
+  border-bottom: 1px solid black !important; ;
   background-color: white;
   color: black;
 }
 .costume_dropdown:focus{
   outline: none;
-  color:cornflowerblue;
+  color:black;
+  &.btn{
+    box-shadow: none!important;
+
+  }
 }
 //dropdown layout
 .costume_dropdown1{

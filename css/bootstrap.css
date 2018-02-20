@@ -51,13 +51,16 @@
     bottom: 0; }
 
 .costume_dropdown {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid black !important;
   background-color: white;
   color: black; }
 
 .costume_dropdown:focus {
   outline: none;
-  color: cornflowerblue; }
+  color: black; }
+  .costume_dropdown:focus.btn {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
 
 .costume_dropdown1 {
   border: 1px solid black;
@@ -6989,7 +6992,6 @@ a > span {
 
 /*end-tags*/
 /*id's*/
-/*end-id's*/
 /*classes*/
 .details_box {
   height: 550px; }
@@ -7010,11 +7012,23 @@ a > span {
 .carousel_header, .carousel_body {
   display: none; }
 
+.shoppine-bag {
+  display: none; }
+
+.underline {
+  text-decoration: underline; }
+
+.bold {
+  font-weight: bold; }
+
+.orange {
+  color: #f68236; }
+
+/*login pagina box shadow*/
 .login > div {
   -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4); }
 
-/*end-classes*/
 /*hovers*/
 /*end-hovers*/
 /*media queries*/
@@ -7026,6 +7040,8 @@ a > span {
 
 @media screen and (min-width: 991px) {
   .carousel_header, .carousel_body {
-    display: block; } }
+    display: block; }
+  .shoppine-bag {
+    display: inline-table; } }
 
 /*end-media queries*/

@@ -52,13 +52,16 @@
     bottom: 0; }
 
 .costume_dropdown {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid black !important;
   background-color: white;
   color: black; }
 
 .costume_dropdown:focus {
   outline: none;
-  color: cornflowerblue; }
+  color: black; }
+  .costume_dropdown:focus.btn {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
 
 .costume_dropdown1 {
   border: 1px solid black;
@@ -70,7 +73,7 @@
   color: white;
   border: none; }
 
-.co:hover {
+.costume_button1:hover {
   color: black; }
 
 .login {
